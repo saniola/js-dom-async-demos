@@ -1,13 +1,41 @@
-# Advanced JavaScript Homework 02
+# JS DOM & Async Demos
 
-## Overview
-This repository contains three tasks as part of the Advanced JavaScript course at GoIT Neoversity. Each task demonstrates different aspects of working with JavaScript, including DOM manipulation, event handling, asynchronous operations, and using third-party libraries.
+A small collection of vanilla JavaScript demos covering DOM events, timers, and asynchronous flows.
 
-### Task 1: Color Switcher
-Create a color switcher that changes the background color of the page every second when the "Start" button is pressed, and stops changing the color when the "Stop" button is pressed. The "Start" button should be disabled while the color switching is active.
+## Features
 
-### Task 2: Countdown Timer
-Create a countdown timer that counts down to a selected date and time. The user can select the date and time using a date picker. If the selected date is in the past, an error message is shown. The timer updates every second, and the user can select a new date at any time, which resets the timer.
+- **Color switcher** — changes the page background color every second while active; Start/Stop buttons toggle the interval
+- **Countdown timer** — pick a date/time with a `flatpickr` date picker and count down to it, updating every second
+- **Promise generator** — generates a configurable number of promises with incrementally increasing delays and reports each resolution/rejection via `izitoast` notifications
 
-### Task 3: Promise Generator
-Create a promise generator that generates a specified number of promises. Each promise resolves or rejects after a specified delay. The delays increase incrementally for each subsequent promise. The results of the promises (fulfilled or rejected) are displayed using notifications.
+## Technology
+
+- Vanilla JavaScript (ES modules)
+- Vite build tooling
+- flatpickr for date selection
+- izitoast for notifications
+- GitHub Actions workflow deploying the production build to GitHub Pages
+
+## Project structure
+
+```
+src/
+  01-color-switcher.html / js/01-color-switcher.js
+  02-timer.html          / js/02-timer.js
+  03-promises.html       / js/03-promises.js
+  css/common.css
+  index.html             Links to all three demos
+```
+
+## Commands
+
+```
+npm install     # install dependencies
+npm run dev     # start the Vite dev server
+npm run build   # build for production (GitHub Pages base path)
+npm run preview # preview the production build
+```
+
+## Deployment
+
+Pushes to `main` trigger a GitHub Actions workflow that builds the project and deploys the `dist` output to the `gh-pages` branch for GitHub Pages.

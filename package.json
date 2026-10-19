@@ -1,11 +1,11 @@
 {
-  "name": "goit-advancedjs-hw-02",
+  "name": "js-dom-async-demos",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/goit-advancedjs-hw-02/",
+    "build": "vite build --base=/js-dom-async-demos/",
     "preview": "vite preview"
   },
   "devDependencies": {
